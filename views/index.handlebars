@@ -1,0 +1,53 @@
+<div class="container">
+    <div class="row header text-center">
+        <!-- header -->
+        <img class="img-responsive icon" src="./assets/img/burger.png">
+        <h1>Eat-da-Burger!</h1>
+        <h2>Hope you're hungry! Below is a list of juicy burgers just waiting to be eaten.</h2>
+
+        <p class="instructions">Click the mouth icon to shovel any juicy burger into your mouth! (left). Click the menu
+            icon to order any burger that isn't currently in stock. (right). Want your own custom burger? Simply enter
+            its name into the field below.</p>
+    </div> <!-- header row -->
+
+    <div class="row orderup  text-center">
+        <input type="text" class="form-control" id="name" placeholder="This juicy burger is called..."><button
+            type="submit" id="submit">Order up!</button>
+    </div> <!-- survey row -->
+
+    <div class="row">
+        <!-- burgers -->
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <!-- left column -->
+            <h1 id="left">Ready to eat...</h1>
+            {{#each burgers}}
+            {{#unless devoured}}
+            <div class="burgerblock">
+                <img src="./assets/img/burger.png" class="tinyicon burgericon"><img src="./assets/img/eat.png"
+                    class="tinyicon eaticon" data-id="{{this.id}}">
+                <h2>{{burger_name}}</h2>
+            </div>
+            {{/unless}}
+            {{/each}}
+        </div> <!-- left column -->
+
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <!-- right column -->
+            <h1 id="right">Already Devoured!</h1>
+            {{#each burgers}}
+            {{#if devoured}}
+            <div class="burgerblock">
+                <img src="./assets/img/burger.png" class="tinyicon burgericon eaten"><img src="./assets/img/menu.png"
+                    class="tinyicon menuicon" data-id="{{this.id}}">
+                <h2>{{burger_name}}</h2>
+            </div>
+            {{/if}}
+            {{/each}}
+        </div> <!-- right column -->
+    </div> <!-- burgers row -->
+
+    <div class="row text-center">
+        <!-- footer -->
+        <p class="footer"><a href="https://github.com/Tony6225/Homework-13-Burger">GitHub</a></p>
+    </div> <!-- footer row -->
+</div> <!-- container -->
