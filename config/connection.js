@@ -4,7 +4,7 @@ var connection;
 
 // if connecting remotely, use JawsDB
 if (process.env.JAWSDB_URL) {
-    connection = mysql.createConnection(process.env.JAWSDB_URL);
+    connection = mysql.createConnection(process.env.CLEARDB_DATABASE_URL);
 } else {
     // creates MySQL server connection
     connection = mysql.createConnection({
