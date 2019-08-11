@@ -2,9 +2,14 @@
 var mysql = require("mysql");
 var connection;
 
-// if connecting remotely, use ClearDB
+// mysql://b7ea05b0c8d6a1:8e5ddd1f@us-cdbr-iron-east-02.cleardb.net/heroku_c507594a2c82451?reconnect=true
 if (process.env.CLEARDB_DATABASE_URL) {
-    connection = mysql.createConnection(process.env.CLEARDB_DATABASE_URL);
+    connection = mysql.createConnection({
+        host: "us-cdbr-iron-east-02.cleardb.net",
+        user: "b7ea05b0c8d6a1",
+        password: "8e5ddd1f",
+        database: "heroku_c507594a2c82451"
+    });
 } else {
     // creates MySQL server connection
     connection = mysql.createConnection({
