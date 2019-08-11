@@ -2,8 +2,8 @@
 var mysql = require("mysql");
 var connection;
 
-// if connecting remotely, use JawsDB
-if (process.env.JAWSDB_URL) {
+// if connecting remotely, use ClearDB
+if (process.env.CLEARDB_DATABASE_URL) {
     connection = mysql.createConnection(process.env.CLEARDB_DATABASE_URL);
 } else {
     // creates MySQL server connection
