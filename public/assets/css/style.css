@@ -12,8 +12,8 @@ div.container {
 div.burgerblock {
 	margin: 10px auto;
 	padding: 5px 10px 0px 10px;
-	background-color: #fffbc6;
-	border-radius: 15px;
+	background-color: #98d9db;
+	color: rgb(45, 45, 45);
 }
 
 /* ------------------------------------ MISCELLANEOUS */
