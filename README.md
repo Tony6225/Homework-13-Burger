@@ -1,5 +1,5 @@
-# Homework-13-Burger
-This is an application which allows you to view, order, customize and eat burgers.
+# Homework-13 Eat Da Burger!!!
+A burger eating app utilizing Node.js/Express/MySQL/Handlebars/ORM. View, order, customize and eat burgers.
 
 # Getting Started
 You will need to have the following Node.js packages installed prior to running this application: body-parser, express, express-handlebars, and mysql.
@@ -13,8 +13,6 @@ Click the eat icon to eat any burger in stock (left). Click the menu to order mo
 * Bootstrap
 * JavaScript
 * jQuery
-* AJAX
-* APIs
 * Node.js
 * Node.js packages (body-parser, express, express-handlebars, mysql)
 * Express.js
